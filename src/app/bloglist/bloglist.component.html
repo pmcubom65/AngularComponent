@@ -1,0 +1,14 @@
+<h1 class="text-light text-center">Lista De Blogs</h1>
+<div class="d-none" id="ocultar">
+  <div class="card-body text-center" *ngFor='let blog of blogs'>
+<div class="card primary-color">
+      <h3 class="card-title text-danger">
+{{blog.title}}
+        </h3>
+        <p class="card-text text-danger">
+{{blog.description}}
+          </p>
+
+</div>
+  </div>
+</div>

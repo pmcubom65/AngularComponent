@@ -1,0 +1,24 @@
+
+<form #blogform='ngForm' (submit)='insert(blogform.value)'>
+  <div class="form-group">
+
+      <input class="form-control" type="text" placeholder="titulo" required name="title" ngModel>
+    </div>
+    <div class="form-group">
+
+        <input class="form-control" type="text" placeholder="descripcion" required name="description" ngModel>
+      </div>
+      <div class="form-group text-center mb-5 ">
+
+          <select name="category" required class="form-control col-lg-12 d-lg-block"   ngModel>
+              <option selected disabled>Elija una categoria...</option>
+            <option *ngFor='let category of categories' value="{{category}}">{{category}}</option>
+
+          </select>
+
+        </div>
+      <div class="form-group text-center mb-5">
+
+          <button type="submit" class="btn btn-success btn-lg btn-block">Crear un nuevo blog</button>
+        </div>
+      </form>
